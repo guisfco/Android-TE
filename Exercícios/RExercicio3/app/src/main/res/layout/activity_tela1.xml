@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="guisfco.com.br.rexercicio3.activities.Tela1Activity">
+
+    <EditText
+        android:id="@+id/et_produto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="57dp"
+        android:ems="10"
+        android:hint="Produto"
+        android:inputType="textPersonName" />
+
+    <AutoCompleteTextView
+        android:id="@+id/ac_estado_fisico"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/et_peso"
+        android:layout_below="@+id/et_produto"
+        android:layout_marginTop="20dp"
+        android:hint="Estado Físico " />
+
+    <RadioGroup
+        android:id="@+id/rg_unidade_medida"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/et_peso"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="55dp">
+
+        <RadioButton
+            android:id="@+id/rb_grama"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/rb_tonelada"
+            android:layout_alignEnd="@+id/rb_tonelada"
+            android:layout_weight="1"
+            android:text="Grama" />
+
+        <RadioButton
+            android:id="@+id/rb_kilograma"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/rb_grama"
+            android:layout_alignStart="@+id/rb_tonelada"
+            android:layout_weight="1"
+            android:text="Kilograma" />
+
+        <RadioButton
+            android:id="@+id/rb_tonelada"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/bt_listar"
+            android:layout_alignEnd="@+id/bt_listar"
+            android:layout_marginBottom="82dp"
+            android:layout_marginEnd="40dp"
+            android:layout_weight="1"
+            android:text="Tonelada" />
+
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/bt_listar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="24dp"
+        android:layout_marginEnd="17dp"
+        android:text="Listar" />
+
+    <Button
+        android:id="@+id/bt_cadastrar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/bt_listar"
+        android:layout_alignBottom="@+id/bt_listar"
+        android:layout_toStartOf="@+id/rg_unidade_medida"
+        android:text="Cadastrar" />
+
+    <EditText
+        android:id="@+id/et_peso"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/et_produto"
+        android:layout_below="@+id/ac_estado_fisico"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:hint="Peso"
+        android:inputType="numberDecimal" />
+
+</RelativeLayout>

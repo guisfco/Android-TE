@@ -43,12 +43,20 @@ public class Usuario implements Serializable {
 
     public String verificaInteresses() {
         StringBuilder interesses = new StringBuilder();
-        if (musica == true) {
+        if (isMusica()) {
             interesses.append(", ").append("Música");
         }
-        if (filme == true) {
+        if (isFilme()) {
             interesses.append(", ").append("Filme");
         }
         return interesses.toString();
+    }
+
+    public String show() {
+        StringBuilder str = new StringBuilder();
+        str.append(this.nome);
+        str.append(", ").append(this.genero);
+        str.append(verificaInteresses());
+        return str.toString();
     }
 }

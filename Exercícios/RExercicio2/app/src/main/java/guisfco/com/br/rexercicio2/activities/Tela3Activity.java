@@ -16,7 +16,7 @@ public class Tela3Activity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tela3);
         usuario = (Usuario) getIntent().getSerializableExtra("usuario");
-        Toast.makeText(this, usuario.getNome() + ", " + usuario.getGenero() + usuario.verificaInteresses(), Toast.LENGTH_LONG).show();
+        Toast.makeText(this, usuario.show(), Toast.LENGTH_LONG).show();
     }
 
 }

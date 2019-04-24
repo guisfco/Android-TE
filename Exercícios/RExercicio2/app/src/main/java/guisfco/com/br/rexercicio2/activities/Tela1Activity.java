@@ -9,6 +9,7 @@ import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
+import android.widget.Toast;
 
 import java.io.Serializable;
 import java.util.ArrayList;
@@ -36,6 +37,7 @@ public class Tela1Activity extends AppCompatActivity {
         btCadastrar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                Toast.makeText(Tela1Activity.this, montaUsuario().show(), Toast.LENGTH_LONG).show();
                 usuarios.add(montaUsuario());
                 limpaCampos();
             }
@@ -69,8 +71,6 @@ public class Tela1Activity extends AppCompatActivity {
 
     private void limpaCampos() {
         etNome.setText("");
-        rgGenero.setSelected(false);
-        rbGenero = null;
         cbMusica.setChecked(false);
         cbFilme.setChecked(false);
     }

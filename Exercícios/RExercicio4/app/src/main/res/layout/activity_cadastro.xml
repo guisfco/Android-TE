@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="guisfco.com.br.rexercicio4.activities.CadastroActivity">
+
+    <EditText
+        android:id="@+id/et_placa"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="45dp"
+        android:ems="10"
+        android:hint="Placa"
+        android:inputType="textPersonName" />
+
+    <EditText
+        android:id="@+id/et_cor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/et_placa"
+        android:layout_below="@+id/et_placa"
+        android:layout_marginTop="38dp"
+        android:ems="10"
+        android:hint="Cor"
+        android:inputType="textPersonName" />
+
+    <Spinner
+        android:id="@+id/sp_marca"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/et_cor"
+        android:layout_marginTop="39dp" />
+
+    <RadioGroup
+        android:id="@+id/rg_estado"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/sp_marca"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="48dp">
+
+        <RadioButton
+            android:id="@+id/rb_novo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Novo" />
+
+        <RadioButton
+            android:id="@+id/rb_usado"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Semi" />
+
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/bt_cadastrar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="30dp"
+        android:layout_marginEnd="31dp"
+        android:text="Cadastrar" />
+</RelativeLayout>
